@@ -10,6 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [ AuthGuard ] },
   { path: 'dashboard', component: DashboardComponent, canActivate: [ AuthGuard ] },
   { path: '', pathMatch: 'full', redirectTo: 'home' },

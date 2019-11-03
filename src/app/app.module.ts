@@ -1,3 +1,4 @@
+import { AuthGuard } from './authentication/auth.guard';
 import { AuthService } from './services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,10 @@ import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminComponent } from './administracion/admin/admin.component';
+import { HomeAdminComponent } from './administracion/home-admin/home-admin.component';
+import { MessagesAdminComponent } from './administracion/messages-admin/messages-admin.component';
+import { NotesAdminComponent } from './administracion/notes-admin/notes-admin.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,11 @@ import { ProfileComponent } from './profile/profile.component';
     ContactComponent,
     DashboardComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdminComponent,
+    HomeAdminComponent,
+    MessagesAdminComponent,
+    NotesAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +35,8 @@ import { ProfileComponent } from './profile/profile.component';
     FormsModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

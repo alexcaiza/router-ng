@@ -17,7 +17,7 @@ export class AuthService {
       (observer) => {
         setTimeout(() => {
           observer.next(this.isLoggedIn);
-        }, 5000);
+        }, 1000);
       }
     );
 
