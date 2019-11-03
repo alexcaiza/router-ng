@@ -1,3 +1,4 @@
+import { ApiService } from './services/api.service';
 import { AuthGuard } from './authentication/auth.guard';
 import { AuthService } from './services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,10 +12,11 @@ import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
-import { AdminComponent } from './administracion/admin/admin.component';
-import { HomeAdminComponent } from './administracion/home-admin/home-admin.component';
-import { MessagesAdminComponent } from './administracion/messages-admin/messages-admin.component';
-import { NotesAdminComponent } from './administracion/notes-admin/notes-admin.component';
+import { AdminComponent } from './administration/admin/admin.component';
+import { HomeAdminComponent } from './administration/home/home.component';
+import { MessagesComponent } from './administration/messages/messages.component';
+import { NotesComponent } from './administration/notes/notes.component';
+import { NotesDetailComponent } from './administration/notes/notes-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,9 @@ import { NotesAdminComponent } from './administracion/notes-admin/notes-admin.co
     ProfileComponent,
     AdminComponent,
     HomeAdminComponent,
-    MessagesAdminComponent,
-    NotesAdminComponent
+    MessagesComponent,
+    NotesComponent,
+    NotesDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { NotesAdminComponent } from './administracion/notes-admin/notes-admin.co
   ],
   providers: [
     AuthService,
-    AuthGuard
+    AuthGuard,
+    ApiService
   ],
   bootstrap: [AppComponent]
 })

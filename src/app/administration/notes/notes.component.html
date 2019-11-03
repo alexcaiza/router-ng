@@ -1,0 +1,6 @@
+<h4>NotesAdmin Component</h4>
+<div class="collection">
+  <a class="collection-item" *ngFor="let note of notes" (click)="onSelect(note)">
+    {{note.id}}: {{note.text}}
+  </a>
+</div>

@@ -7,11 +7,16 @@ import { Observable } from 'rxjs';
 export class AuthService {
 
   isLoggedIn: boolean = false;
+  isAdmin: boolean = false;
 
-  login() {
+  login(username: string) {
     console.log('the login method');
 
     this.isLoggedIn = true;
+    
+    if (username == "admin") {
+      this.isAdmin = true;
+    }
 
     return new Observable(
       (observer) => {

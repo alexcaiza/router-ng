@@ -1,0 +1,15 @@
+<h4>NotesAdminDetail Component</h4>
+<div *ngIf="note">
+  <h3>"{{note.text}}"</h3>
+  <div>
+    <label>Id: </label>
+    <input [(ngModel)]="note.id" disabled placeholder="noteId" />
+  </div>
+  <div>
+    <label>Note: </label>
+    <input [(ngModel)]="note.text" placeholder="note" />
+  </div>
+  <p>
+    <button class="waves-effect waves-light btn-large" (click)="gotoNotes()">Back</button>
+  </p>
+</div>
